@@ -1,0 +1,21 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    dependencies {
+        testCompile 'junit:junit:4.11'
+    }
+}
+
+task createModuleDirs << {
+    file (moduleName + '/src/main/java/com/veggiethespiancoder/castflow/' + moduleName + '/model').mkdirs()
+    file (moduleName + '/src/main/java/com/veggiethespiancoder/castflow/' + moduleName + '/dao').mkdirs()
+    file (moduleName + '/src/main/java/com/veggiethespiancoder/castflow/' + moduleName + '/service').mkdirs()
+    file (moduleName + '/src/main/java/com/veggiethespiancoder/castflow/' + moduleName + '/servlet').mkdirs()
+    file (moduleName + '/src/test/java/com/veggiethespiancoder/castflow/' + moduleName + '/test').mkdirs()
+
+    // if we didn't want to create the individual package directories, we could have just replace the above with the following line:
+    // project(':server:' + moduleName).sourceSets*.java.srcDirs*.each { it.mkdirs() }
+
+    project(':server:' + moduleName).sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}

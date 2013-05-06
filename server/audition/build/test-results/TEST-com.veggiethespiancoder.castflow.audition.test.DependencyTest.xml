@@ -1,0 +1,7 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="com.veggiethespiancoder.castflow.audition.test.DependencyTest" tests="1" failures="0" errors="0" timestamp="2013-05-06T00:54:23" hostname="unknown60334b25e953" time="0.0030">
+  <properties/>
+  <testcase name="testInstantiateUser" classname="com.veggiethespiancoder.castflow.audition.test.DependencyTest" time="0.0030"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
